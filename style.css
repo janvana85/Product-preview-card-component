@@ -1,0 +1,134 @@
+:root{
+    --dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --dark-blue: hsl(212, 21%, 14%);
+    --grayish-blue: hsl(228, 12%, 48%);
+    --hover-green: #1A4031;
+
+    --fw-regular:500;
+    --fw-bold:700;
+    
+}
+.fw-regular{
+    font-weight: var(--fw-regular);
+}
+.fw-bold{
+    font-weight: var(--fw-bold);
+}
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cream);
+}
+.product-img-mobile {
+    width: 400px;
+    height: 260px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product-img-desktop{
+    display: none;
+}
+.card{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color:var(--white);
+}
+.content{
+    margin-left: 25px;
+}
+.prices{
+    font-size: large;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+h6{
+    font-weight: var(--fw-regular);
+    font-size: 14px;
+    font-family: Montserrat;
+    letter-spacing: 4px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+p{
+    opacity: .6;
+    text-align:left;
+    font-size: 15px;
+    font-family: Montserrat;
+}
+h3,div{
+    font-size: 40px;
+    font-family: Fraunces;
+    
+}
+.big-price{
+    font-size: 30px;
+    color: var(--dark-cyan);
+}
+.sm-price{
+    font-weight: var(--fw-bold);
+    opacity: 0.4;
+    font-size: 12px;
+    font-family: Montserrat;
+    line-height: 1;
+    text-decoration: line-through;
+}
+.prices{
+    margin-bottom: 15px;
+}
+.add-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border:none;
+    color: var(--white);
+    background-color: var(--dark-cyan);
+    width: 350px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    align-self: center;
+    text-align: center;
+    font-weight: var(--fw-bold);
+    font-size: 15px;
+}
+.add-btn:hover{
+    cursor: pointer;
+    background-color: var(--hover-green);
+}
+
+@media (min-width: 1440px){
+    .product-img-desktop{
+        display: block;
+        width: 320px;
+        height: 500px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .product-img-mobile{
+        display: none;
+    }
+    .card{
+        width: auto;
+        height: 500px;
+        display: grid;
+        grid-template-columns: min-content 350px;
+
+    }
+    .add-btn{
+        width: 260px;
+        justify-content: center;
+    }
+    
+}
